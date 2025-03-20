@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dehradun - The City of Love | ITinerary</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="da.css" />
+    <script>
+      function onGoogleTranslateLoad() {
+        console.log("Google Translate script loaded");
+        if (typeof google !== "undefined" && google.translate) {
+          new google.translate.TranslateElement(
+            {
+              pageLanguage: "en",
+              includedLanguages: "en,hi,pa,bn,gu,ta,es,fr,de,ja,zh",
+            },
+            "google_translate_element",
+            {
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              autoDisplay: false,
+            }
+          );
+        } else {
+          console.error("Google Translate not available yet");
+        }
+      }
+      // Function to handle language changes
+      function handleLanguageChange(value) {
+        try {
+          // Find the Google Translate select element
+          const googleTranslateSelect =
+            document.querySelector(".goog-te-combo");
+
+          if (!googleTranslateSelect) {
+            console.error("Google Translate widget not found");
+            return;
+          }
+
+          // Map our language codes to Google Translate codes if needed
+          const languageMap = {
+            en: "en",
+            hi: "hi",
+            es: "es",
+            fr: "fr",
+            de: "de",
+            ja: "ja",
+            zh: "zh-CN",
+          };
+
+          // Get the corresponding Google Translate language code
+          const translateCode = languageMap[value] || value;
+
+          // Set the value and trigger the change event
+          googleTranslateSelect.value = translateCode;
+          googleTranslateSelect.dispatchEvent(new Event("change"));
+
+          // Save language preference
+          localStorage.setItem("preferredLanguage", value);
+
+          console.log(`Language changed to: ${value}`);
+        } catch (error) {
+          console.error("Error changing language:", error);
+        }
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=onGoogleTranslateLoad"
+    ></script>
+  </head>
+  <body>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <a href="#" class="logo">Plan<span>IT</span></a>
+    </nav>
+
+    <!-- Dehradun Navigation -->
+    <nav class="dehradun-nav">
+      <div class="nav-links">
+        <a href="#about-dehradun">About</a>
+        <a href="DA-places.html">Places to Visit</a>
+        <a href="#activities">Activities</a>
+        <a href="#stay">Where to Stay</a>
+        <a href="#markets">Nearby Markets</a>
+        <a href="#food">Local Food</a>
+        <a href="ITI.html">Back to Home</a>
+        <div class="language-selector">
+          <select
+            id="languageSelect"
+            onchange="handleLanguageChange(this.value)"
+          >
+            <option value="en">English</option>
+            <option value="hi">हिंदी</option>
+            <option value="pa">ਪੰਜਾਬੀ</option>
+            <option value="bn">বাংলা</option>
+            <option value="gu">ગુજરાતી</option>
+            <option value="ta">தமிழ்</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+          </select>
+        </div>
+        <div id="google_translate_element"></div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="garhwali-greeting">Namaskaar! (नमस्कार)</p>
+        <h1>Welcome to Dehradun</h1>
+        <p>The Gateway to Garhwal Himalayas</p>
+      </div>
+    </section>
+
+    <!-- About Dehradun Section -->
+    <section id="about-dehradun" class="about">
+      <div class="section-title" data-aos="fade-up">
+        <h2 class="main-heading">About Dehradun</h2>
+        <p class="subtitle">
+          Gateway to the Himalayas: Where Heritage Meets Modern Aspirations
+        </p>
+      </div>
+
+      <div class="about-cards-container">
+        <div class="about-card" data-aos="fade-up">
+          <div class="card-icon">🏛️</div>
+          <h3>Rich Heritage</h3>
+          <p>
+            Founded in 1676 by Guru Ram Rai, Dehradun has evolved from a
+            spiritual sanctuary to Uttarakhand's dynamic capital. The city's
+            name reflects its rich history - 'Dehra' (camp) of Guru Ram Rai and
+            'Dun' (valley), nestled in the Doon Valley.
+          </p>
+          <ul class="heritage-points">
+            <li>Ancient Buddhist temples and monasteries</li>
+            <li>British-era architecture</li>
+            <li>Historical freedom movement sites</li>
+          </ul>
+        </div>
+
+        <div class="about-card" data-aos="fade-up">
+          <div class="card-icon">🎓</div>
+          <h3>Knowledge Capital</h3>
+          <p>
+            Renowned as India's premier educational hub, hosting institutions
+            that shape the nation's future leaders.
+          </p>
+          <ul class="education-points">
+            <li>Forest Research Institute (Est. 1906)</li>
+            <li>Indian Military Academy</li>
+            <li>Wildlife Institute of India</li>
+            <li>Doon School (India's Eton)</li>
+            <li>ONGC Training Institute</li>
+          </ul>
+        </div>
+
+        <div class="about-card" data-aos="fade-up">
+          <div class="card-icon">🌿</div>
+          <h3>Natural Paradise</h3>
+          <p>
+            A perfect blend of Himalayan majesty and valley serenity at 435m
+            elevation.
+          </p>
+          <div class="nature-highlights">
+            <div class="climate-info">
+              <span>🌡️ Climate: 15°C - 30°C</span>
+              <span>🌧️ Rainfall: 2073mm/year</span>
+            </div>
+            <ul class="nature-points">
+              <li>Surrounded by Shivalik Hills</li>
+              <li>Rivers: Song, Tons & Rispana</li>
+              <li>Rich biodiversity</li>
+              <li>Tea gardens & Basmati fields</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-card" data-aos="fade-up">
+          <div class="card-icon">🎨</div>
+          <h3>Cultural Mosaic</h3>
+          <p>
+            Experience the vibrant blend of Garhwali and Kumaoni traditions.
+          </p>
+          <div class="cultural-highlights">
+            <h4>Festival Calendar</h4>
+            <ul class="festival-list">
+              <li>Basant Panchami (Spring Festival)</li>
+              <li>Bissu Fair (Harvest Celebration)</li>
+              <li>Jhanda Fair (March)</li>
+            </ul>
+            <div class="cuisine-section">
+              <h4>Local Delicacies</h4>
+              <span>Bal Mithai • Kandali Saag • Pahadi Raita</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="travel-essentials" class="essentials">
+      <div class="section-title" data-aos="fade-up">
+        <h2 class="main-heading">Travel Essentials</h2>
+        <p class="subtitle">Everything You Need for Your Dehradun Adventure</p>
+      </div>
+
+      <div class="essentials-container">
+        <div class="essential-card" data-aos="fade-up">
+          <div class="card-icon">🌤️</div>
+          <h3>Best Time to Visit</h3>
+          <div class="season-info">
+            <div class="season">
+              <h4>Peak Season</h4>
+              <p>March to June</p>
+              <span>Temperature: 15°C - 30°C</span>
+            </div>
+            <div class="season">
+              <h4>Off Season</h4>
+              <p>July to September</p>
+              <span>Monsoon period with occasional rainfall</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="essential-card" data-aos="fade-up">
+          <div class="card-icon">🚆</div>
+          <h3>How to Reach</h3>
+          <div class="transport-options">
+            <div class="transport">
+              <h4>✈️ By Air</h4>
+              <p>Jolly Grant Airport (25 km)</p>
+              <span>Direct flights from Delhi, Mumbai</span>
+            </div>
+            <div class="transport">
+              <h4>🚂 By Train</h4>
+              <p>Dehradun Railway Station</p>
+              <span>Well connected to major cities</span>
+            </div>
+            <div class="transport">
+              <h4>🚌 By Road</h4>
+              <p>Regular buses from Delhi, Chandigarh</p>
+              <span>6-7 hours from Delhi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="essential-card" data-aos="fade-up">
+          <div class="card-icon">🎒</div>
+          <h3>What to Pack</h3>
+          <div class="packing-list">
+            <ul>
+              <li>Light woolens (October-February)</li>
+              <li>Comfortable walking shoes</li>
+              <li>Rain gear (July-September)</li>
+              <li>Sun protection</li>
+              <li>Basic medications</li>
+              <li>Camera gear</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="essential-card" data-aos="fade-up">
+          <div class="card-icon">💡</div>
+          <h3>Travel Tips</h3>
+          <div class="tips-list">
+            <ul>
+              <li>Book accommodations in advance during peak season</li>
+              <li>Local transport: Auto-rickshaws, taxis readily available</li>
+              <li>Carry cash as some places might not accept cards</li>
+              <li>Try local cuisine at famous eateries</li>
+              <li>Visit FRI on weekdays to avoid crowds</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nearby-destinations" class="destinations">
+      <div class="section-title" data-aos="fade-up">
+        <h2 class="main-heading">Nearby Destinations</h2>
+        <p class="subtitle">Explore These Gems Around Dehradun</p>
+      </div>
+
+      <div class="destinations-container">
+        <div class="destination-card" data-aos="fade-up">
+          <div class="destination-image">
+            <img
+              src="https://www.holidify.com/images/bgImages/MUSSOORIE.jpg"
+              alt="Mussoorie"
+            />
+            <div class="distance-badge">30 km</div>
+          </div>
+          <div class="destination-content">
+            <h3>Mussoorie</h3>
+            <p class="tagline">Queen of Hills</p>
+            <div class="highlights">
+              <span>🏔️ Mall Road</span>
+              <span>🎡 Kempty Falls</span>
+              <span>🌅 Lal Tibba</span>
+            </div>
+            <div class="travel-info">
+              <p>Best Time: March - June</p>
+              <p>Duration: 1-2 days</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="destination-card" data-aos="fade-up">
+          <div class="destination-image">
+            <img
+              src="https://www.holidify.com/images/bgImages/RISHIKESH.jpg"
+              alt="Rishikesh"
+            />
+            <div class="distance-badge">45 km</div>
+          </div>
+          <div class="destination-content">
+            <h3>Rishikesh</h3>
+            <p class="tagline">Yoga Capital of the World</p>
+            <div class="highlights">
+              <span>🌊 River Rafting</span>
+              <span>🧘‍♀️ Yoga Centers</span>
+              <span>🌉 Laxman Jhula</span>
+            </div>
+            <div class="travel-info">
+              <p>Best Time: September - March</p>
+              <p>Duration: 2-3 days</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="destination-card" data-aos="fade-up">
+          <div class="destination-image">
+            <img
+              src="https://www.holidify.com/images/bgImages/HARIDWAR.jpg"
+              alt="Haridwar"
+            />
+            <div class="distance-badge">52 km</div>
+          </div>
+          <div class="destination-content">
+            <h3>Haridwar</h3>
+            <p class="tagline">Gateway to God</p>
+            <div class="highlights">
+              <span>🕉️ Har Ki Pauri</span>
+              <span>🌅 Ganga Aarti</span>
+              <span>🚡 Mansa Devi</span>
+            </div>
+            <div class="travel-info">
+              <p>Best Time: October - March</p>
+              <p>Duration: 1-2 days</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="destination-card" data-aos="fade-up">
+          <div class="destination-image">
+            <img
+              src="https://www.holidify.com/images/bgImages/DHANAULTI.jpg"
+              alt="Dhanaulti"
+            />
+            <div class="distance-badge">60 km</div>
+          </div>
+          <div class="destination-content">
+            <h3>Dhanaulti</h3>
+            <p class="tagline">Peaceful Hill Station</p>
+            <div class="highlights">
+              <span>🌲 Eco Park</span>
+              <span>⛰️ Surkanda Devi</span>
+              <span>🏂 Adventure Sports</span>
+            </div>
+            <div class="travel-info">
+              <p>Best Time: March - June</p>
+              <p>Duration: 1-2 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-quote">
+          <blockquote>
+            "India is not a country, but a home to millions of stories, where
+            every journey becomes a celebration of diversity."
+          </blockquote>
+        </div>
+
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="LinkedIn"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>📧 info@itinerary.com</p>
+          <p>📱 +91 98765 43210</p>
+          <p>🏢 Mumbai, India</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 ITinerary. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Add this JavaScript code before the closing body tag -->
+    <script>
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          }
+        });
+      }, observerOptions);
+
+      // Target elements to animate
+      const sections = document.querySelectorAll(
+        ".famous-for, .places-grid, .essentials"
+      );
+      sections.forEach((section) => observer.observe(section));
+    </script>
+    <script>
+      const observerOptions = {
+        threshold: 0.2,
+        rootMargin: "0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+          }
+        });
+      }, observerOptions);
+
+      // Target elements to animate
+      const sections = document.querySelectorAll(
+        ".famous-for, .places-grid, .essentials"
+      );
+      sections.forEach((section) => observer.observe(section));
+    </script>
+  </body>
+</html>

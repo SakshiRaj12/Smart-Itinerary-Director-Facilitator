@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Buddy Chatbot</title>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+  <body>
+    <div class="chat-container" role="main">
+      <div class="chat-header">
+        <h1>🌴 Travel Buddy AI</h1>
+      </div>
+      <div
+        class="chat-messages"
+        id="chatMessages"
+        role="log"
+        aria-live="polite"
+      >
+        <!-- Messages will be inserted here by JavaScript -->
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Ask about your next adventure..."
+          aria-label="Type your message"
+        />
+        <button id="sendButton" aria-label="Send message">
+          <span>Send</span>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>

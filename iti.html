@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITinerary - Discover India's Magic</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="iti.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#" class="logo">Plan<span>IT</span></a>
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#destinations">Destinations</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#plan">Plan Trip</a>
+        <a href="#about">About</a>
+        <a href="#seasonal">Explore More</a>
+        <div class="auth-buttons">
+          <a href="auth.html"><button class="login-btn">Login</button></a>
+          <a href="auth.html"><button class="signup-btn">Sign Up</button></a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+      <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+          <!-- Jaipur Slide -->
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/JAIPUR.jpg"
+              class="slide-bg"
+              alt="Jaipur"
+            />
+            <div class="slide-overlay"></div>
+            <div class="slide-content" data-aos="fade-up">
+              <h1>The Pink City - Jaipur</h1>
+              <p>
+                Experience royal palaces, vibrant bazaars, and rich Rajasthani
+                culture
+              </p>
+              <a href="#explore" class="cta-button">Explore Jaipur</a>
+            </div>
+          </div>
+
+          <!-- Varanasi Slide -->
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/VARANASI.jpg"
+              class="slide-bg"
+              alt="Varanasi"
+            />
+            <div class="slide-overlay"></div>
+            <div class="slide-content" data-aos="fade-up">
+              <h1>Spiritual Varanasi</h1>
+              <p>
+                Discover the mystical ghats and ancient temples along the Ganges
+              </p>
+              <a href="#explore" class="cta-button">Explore Varanasi</a>
+            </div>
+          </div>
+
+          <!-- Manali Slide -->
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/MANALI.jpg"
+              class="slide-bg"
+              alt="Manali"
+            />
+            <div class="slide-overlay"></div>
+            <div class="slide-content" data-aos="fade-up">
+              <h1>Majestic Manali</h1>
+              <p>Adventure in the heart of Himalayas with snow-capped peaks</p>
+              <a href="manali.html" class="cta-button">Explore Manali</a>
+            </div>
+          </div>
+
+          <!-- Dehradun Slide -->
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/DEHRADUN.jpg"
+              class="slide-bg"
+              alt="Dehradun"
+            />
+            <div class="slide-overlay"></div>
+            <div class="slide-content" data-aos="fade-up">
+              <h1>Serene Dehradun</h1>
+              <p>Gateway to the Himalayas with scenic valleys and waterfalls</p>
+              <a href="dehradun.html" class="cta-button">Explore Dehradun</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="destinations" id="destinations">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Popular Destinations</h2>
+        <p>Explore India's most beloved places</p>
+      </div>
+      <div class="destination-grid">
+        <div class="destination-card" data-aos="fade-up">
+          <img
+            src="https://www.holidify.com/images/bgImages/GOA.jpg"
+            alt="Goa"
+          />
+          <div class="destination-overlay">
+            <h3>Goa</h3>
+            <p>Beaches, Nightlife & Portuguese Heritage</p>
+          </div>
+        </div>
+        <div class="destination-card" data-aos="fade-up">
+          <img
+            src="https://www.holidify.com/images/bgImages/KERALA.jpg"
+            alt="Kerala"
+          />
+          <div class="destination-overlay">
+            <h3>Kerala</h3>
+            <p>Backwaters, Tea Gardens & Ayurveda</p>
+          </div>
+        </div>
+        <div class="destination-card" data-aos="fade-up">
+          <img
+            src="https://www.holidify.com/images/bgImages/JAIPUR.jpg"
+            alt="Jaipur"
+          />
+          <div class="destination-overlay">
+            <h3>Jaipur</h3>
+            <p>The Pink City & Rajasthani Culture</p>
+          </div>
+        </div>
+        <div class="destination-card" data-aos="fade-up">
+          <img
+            src="https://www.holidify.com/images/bgImages/VARANASI.jpg"
+            alt="Varanasi"
+          />
+          <div class="destination-overlay">
+            <h3>Varanasi</h3>
+            <p>Spiritual Capital & Ancient Ghats</p>
+          </div>
+        </div>
+        <a href="DA.html">
+          <div class="destination-card" data-aos="fade-up">
+            <img
+              src="https://www.holidify.com/images/bgImages/DEHRADUN.jpg"
+              alt="Dehradun"
+            />
+            <div class="destination-overlay">
+              <h3>Dehradun</h3>
+              <p>Valley of Knowledge & Himalayan Gateway</p>
+            </div>
+          </div>
+        </a>
+        <a href="M.html">
+          <div class="destination-card" data-aos="fade-up">
+            <img
+              src="https://www.holidify.com/images/bgImages/MANALI.jpg"
+              alt="Manali"
+            />
+            <div class="destination-overlay">
+              <h3>Manali</h3>
+              <p>Himalayan Paradise & Adventure Sports</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Add more sections -->
+    <section class="about" id="about">
+      <div class="section-title" data-aos="fade-up">
+        <h2>About ITinerary</h2>
+        <p>Your Gateway to Incredible India</p>
+      </div>
+      <div class="about-content" data-aos="fade-up">
+        <div class="about-text">
+          <h3>Discover India's Magic With Us</h3>
+          <p>
+            ITinerary brings you curated travel experiences across India's most
+            enchanting destinations. From the snow-capped peaks of the Himalayas
+            to the sun-kissed beaches of Kerala, we help you explore India's
+            rich tapestry of cultures, traditions, and landscapes.
+          </p>
+          <div class="features-grid">
+            <div class="feature">
+              <h4>Expert Local Insights</h4>
+              <p>
+                Get authentic recommendations from our network of local travel
+                experts who know every hidden gem.
+              </p>
+            </div>
+            <div class="feature">
+              <h4>Personalized Itineraries</h4>
+              <p>
+                Custom travel plans tailored to your interests, time, and budget
+                using smart AI technology.
+              </p>
+            </div>
+            <div class="feature">
+              <h4>Cultural Immersion</h4>
+              <p>
+                Experience traditional festivals, local cuisines, and authentic
+                cultural activities.
+              </p>
+            </div>
+            <div class="feature">
+              <h4>Sustainable Travel</h4>
+              <p>
+                We promote responsible tourism that benefits local communities
+                and preserves India's heritage.
+              </p>
+            </div>
+          </div>
+          <div class="stats" data-aos="fade-up">
+            <div class="stat-item">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Destinations</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50,000+</span>
+              <span class="stat-label">Happy Travelers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Local Experts</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Years of Experience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plan-trip" id="plan">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Plan Your Dream Trip</h2>
+        <p>Customize your perfect Indian adventure</p>
+      </div>
+      <div class="destination-carousel swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/KERALA.jpg"
+              alt="Kerala"
+            />
+            <div class="slide-caption">Kerala - God's Own Country</div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/LADAKH.jpg"
+              alt="Ladakh"
+            />
+            <div class="slide-caption">Ladakh - Land of High Passes</div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/GOA.jpg"
+              alt="Goa"
+            />
+            <div class="slide-caption">Goa - Pearl of the Orient</div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/CHOPTA.jpg"
+              alt="Chopta"
+            />
+            <div class="slide-caption">Chopta - Mini Switzerland of India</div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/MANALI.jpg"
+              alt="Manali"
+            />
+            <div class="slide-caption">Manali - Valley of the Gods</div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.holidify.com/images/bgImages/MIZORAM.jpg"
+              alt="Mizoram"
+            />
+            <div class="slide-caption">
+              Mizoram - Land of the Blue Mountains
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="planner-cta">
+        <div class="india-quote">
+          "In India, the journey itself is the destination. Every mile tells a
+          story, every moment creates a memory."
+        </div>
+        <a href="planit.html">
+          <button class="plan-journey-btn">
+            Plan Your Itinerary
+            <span class="arrow">→</span>
+          </button>
+        </a>
+      </div>
+      <div class="planner-features" data-aos="fade-left">
+        <div class="feature-card">
+          <h3>Personalized Itineraries</h3>
+          <p>Get custom travel plans based on your interests and schedule</p>
+        </div>
+        <div class="feature-card">
+          <h3>Local Expertise</h3>
+          <p>Benefit from our network of local travel experts</p>
+        </div>
+        <div class="feature-card">
+          <h3>Real-Time Updates</h3>
+          <p>Receive latest information about destinations and activities</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="upcoming-places" id="seasonal">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Best Places to Visit in Upcoming Seasons</h2>
+        <p>Perfect destinations for every season</p>
+      </div>
+      <div class="season-tabs">
+        <button class="tab-btn active" data-season="winter">Winter</button>
+        <button class="tab-btn" data-season="spring">Spring</button>
+        <button class="tab-btn" data-season="summer">Summer</button>
+        <button class="tab-btn" data-season="monsoon">Monsoon</button>
+      </div>
+    </section>
+
+    <div class="places-grid" data-aos="fade-up">
+      <div class="place-card">
+        <img
+          src="https://www.holidify.com/images/bgImages/AULI.jpg"
+          alt="Rann of Kutch"
+        />
+        <div class="place-content">
+          <h3>Rann of Kutch</h3>
+          <p>Perfect for: White Desert Festival</p>
+          <div class="weather">🌡️ 15°C - 25°C</div>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img
+          src="https://www.holidify.com/images/bgImages/AULI.jpg"
+          alt="Auli"
+        />
+        <div class="place-content">
+          <h3>Auli</h3>
+          <p>Perfect for: Skiing, Snow Views</p>
+          <div class="weather">🌡️ -2°C - 7°C</div>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img
+          src="https://www.holidify.com/images/bgImages/ANDAMAN.jpg"
+          alt="Andaman"
+        />
+        <div class="place-content">
+          <h3>Andaman</h3>
+          <p>Perfect for: Beach Holiday</p>
+          <div class="weather">🌡️ 23°C - 30°C</div>
+        </div>
+      </div>
+    </div>
+
+    <section class="my-experience" id="experience">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Travel Stories & Experiences</h2>
+        <p>Real adventures from our community</p>
+      </div>
+
+      <div class="experience-container">
+        <div class="experience-card" data-aos="fade-up">
+          <div class="experience-image">
+            <img
+              src="https://www.holidify.com/images/bgImages/VARANASI.jpg"
+              alt="Varanasi Experience"
+            />
+          </div>
+          <div class="experience-details">
+            <h3>Spiritual Journey in Varanasi</h3>
+            <div class="author">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Author"
+              />
+              <span>Sarah Parker</span>
+            </div>
+            <p>
+              "The morning boat ride along the Ganges was a life-changing
+              experience. The ancient ghats, the spiritual atmosphere..."
+            </p>
+            <div class="stats">
+              <span>📅 3 days ago</span>
+              <span>❤️ 234 likes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card" data-aos="fade-up">
+          <div class="experience-image">
+            <img
+              src="https://www.holidify.com/images/bgImages/JAIPUR.jpg"
+              alt="Jaipur Experience"
+            />
+          </div>
+          <div class="experience-details">
+            <h3>Royal Adventure in Jaipur</h3>
+            <div class="author">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Author"
+              />
+              <span>Mike Ross</span>
+            </div>
+            <p>
+              "Exploring the majestic Amber Fort, shopping in vibrant bazaars,
+              and experiencing Rajasthani hospitality..."
+            </p>
+            <div class="stats">
+              <span>📅 1 week ago</span>
+              <span>❤️ 456 likes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-card" data-aos="fade-up">
+          <div class="experience-image">
+            <img
+              src="https://www.holidify.com/images/bgImages/MANALI.jpg"
+              alt="Manali Experience"
+            />
+          </div>
+          <div class="experience-details">
+            <h3>Himalayan Adventure in Manali</h3>
+            <div class="author">
+              <img
+                src="https://randomuser.me/api/portraits/women/28.jpg"
+                alt="Author"
+              />
+              <span>Emma Wilson</span>
+            </div>
+            <p>
+              "Paragliding over snow-capped peaks, river rafting in Beas, and
+              peaceful moments in ancient temples..."
+            </p>
+            <div class="stats">
+              <span>📅 2 weeks ago</span>
+              <span>❤️ 567 likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-quote">
+          <blockquote>
+            "India is not a country, but a home to millions of stories, where
+            every journey becomes a celebration of diversity."
+          </blockquote>
+        </div>
+
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                alt="Twitter"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="LinkedIn"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>📧 info@itinerary.com</p>
+          <p>📱 +91 98765 43210</p>
+          <p>🏢 Mumbai, India</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 ITinerary. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        offset: 100,
+      });
+
+      // Initialize Swiper
+      new Swiper(".hero-slider", {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        document
+          .querySelector(".navbar")
+          .classList.toggle("scrolled", window.scrollY > 50);
+      });
+
+      new Swiper(".destination-carousel", {
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      document.querySelectorAll(".tab-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+        });
+      });
+
+      document
+        .querySelector(".trip-planner-container")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Handle form submission
+        });
+      // Add AOS (Animate On Scroll) library for smooth animations
+
+      const seasonalDestinations = {
+        winter: [
+          {
+            image: "https://www.holidify.com/images/bgImages/AULI.jpg",
+            name: "Auli",
+            perfect: "Perfect for: Skiing & Snow Adventures",
+            weather: "-2°C - 7°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/CHOPTA.jpg",
+            name: "Chopta",
+            perfect: "Perfect for: Snow Trek to Tungnath",
+            weather: "-5°C - 10°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/ANDAMAN.jpg",
+            name: "Andaman",
+            perfect: "Perfect for: Beach Holiday",
+            weather: "23°C - 30°C",
+          },
+        ],
+        spring: [
+          {
+            image:
+              "https://www.holidify.com/images/bgImages/VALLEY-OF-FLOWERS.jpg",
+            name: "Valley of Flowers",
+            perfect: "Perfect for: Floral Landscapes",
+            weather: "15°C - 25°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/DARJEELING.jpg",
+            name: "Darjeeling",
+            perfect: "Perfect for: Tea Gardens & Mountain Views",
+            weather: "10°C - 20°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/RISHIKESH.jpg",
+            name: "Rishikesh",
+            perfect: "Perfect for: River Rafting",
+            weather: "20°C - 35°C",
+          },
+        ],
+        summer: [
+          {
+            image: "https://www.holidify.com/images/bgImages/LADAKH.jpg",
+            name: "Ladakh",
+            perfect: "Perfect for: High Altitude Adventures",
+            weather: "10°C - 25°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/MANALI.jpg",
+            name: "Manali",
+            perfect: "Perfect for: Mountain Escapes",
+            weather: "15°C - 30°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/COORG.jpg",
+            name: "Coorg",
+            perfect: "Perfect for: Coffee Plantations",
+            weather: "20°C - 35°C",
+          },
+        ],
+        monsoon: [
+          {
+            image: "https://www.holidify.com/images/bgImages/MUNNAR.jpg",
+            name: "Munnar",
+            perfect: "Perfect for: Tea Plantations in Rain",
+            weather: "19°C - 28°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/LONAVALA.jpg",
+            name: "Lonavala",
+            perfect: "Perfect for: Waterfalls & Greenery",
+            weather: "23°C - 32°C",
+          },
+          {
+            image: "https://www.holidify.com/images/bgImages/UDAIPUR.jpg",
+            name: "Udaipur",
+            perfect: "Perfect for: Lake Views",
+            weather: "25°C - 35°C",
+          },
+        ],
+      };
+
+      function updateDestinations(season) {
+        const placesGrid = document.querySelector(".places-grid");
+        const destinations = seasonalDestinations[season];
+
+        placesGrid.innerHTML = destinations
+          .map(
+            (dest) => `
+                    <div class="place-card" data-aos="fade-up">
+                        <img src="${dest.image}" alt="${dest.name}">
+                        <div class="place-content">
+                            <h3>${dest.name}</h3>
+                            <p>${dest.perfect}</p>
+                            <div class="weather">🌡️ ${dest.weather}</div>
+                        </div>
+                    </div>
+                `
+          )
+          .join("");
+      }
+
+      document.querySelectorAll(".tab-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+          updateDestinations(button.dataset.season);
+        });
+      });
+
+      updateDestinations("winter");
+
+      // Mobile Menu Toggle
+      const menuBtn = document.querySelector(".menu-btn");
+      const navLinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuBtn.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

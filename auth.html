@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITinerary - Login/Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-image"></div>
+            <div class="auth-forms">
+                <div class="logo">ITinerary</div>
+                <div class="form-container">
+                    <form class="form login-form active">
+                        <h2>नमस्ते! (Namaste!)</h2>
+                        <p class="welcome-text">Welcome back to your travel companion</p>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Login</button>
+                        <div class="switch-form">
+                            <button type="button" class="switch-btn" onclick="switchForm('signup')">New user? Create account</button>
+                        </div>
+                    </form>
+
+                    <form class="form signup-form">
+                        <h2>स्वागत है! (Welcome!)</h2>
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" required placeholder="Minimum 8 characters">
+                        </div>
+                        <div class="input-group">
+                            <label>Phone Number</label>
+                            <input type="tel" pattern="[0-9]{10}" placeholder="10-digit mobile number" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Preferred Language</label>
+                            <select required>
+                                <option value="">Select Language</option>
+                                <option value="english">English</option>
+                                <option value="hindi">Hindi</option>
+                                <option value="tamil">Tamil</option>
+                                <option value="bengali">Bengali</option>
+                                <option value="telugu">Telugu</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Travel Preferences (Select multiple)</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="adventure"> <label for="adventure">Adventure</label>
+                                <input type="checkbox" id="cultural"> <label for="cultural">Cultural</label>
+                                <input type="checkbox" id="spiritual"> <label for="spiritual">Spiritual</label>
+                                <input type="checkbox" id="food"> <label for="food">Food & Cuisine</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">यात्रा शुरू करें (Start Journey)</button>
+                        <div class="switch-form">
+                            <button type="button" class="switch-btn" onclick="switchForm('login')">Already have an account? Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="ITI.html" class="logo">ITinerary</a>
+    </nav>
+
+    
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-quote">
+                <blockquote>
+                "India is not a country, but a home to millions of stories, where every journey becomes a celebration of diversity."
+                </blockquote>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+
+                        <a href="https://www.facebook.com/yourpage" target="_blank"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/yourpage" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+                        <a href="https://www.twitter.com/yourpage" target="_blank"><img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter"></a>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function switchForm(type) {
+            const loginForm = document.querySelector('.login-form');
+            const signupForm = document.querySelector('.signup-form');
+            
+            if(type === 'signup') {
+                loginForm.classList.remove('active');
+                signupForm.classList.add('active');
+            } else {
+                signupForm.classList.remove('active');
+                loginForm.classList.add('active');
+            }
+        }
+    </script>
+    <!-- Paste this script before end of body element-->
+<script src='https://app.hyperise.io/snippets/r/v2/zAb8njQxC.js?v=1.0.0'></script>
+<script>
+hyperise.init();
+</script>
+</body>
+</html>

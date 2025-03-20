@@ -1,0 +1,356 @@
+:root {
+  --primary: #2c3e50;
+  --secondary: #2a3b47;
+  --accent: #3498db;
+  --text-light: #ffffff;
+  --text-dark: #1a1a1a;
+  --gradient: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Animated Travel Elements */
+.travel-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.plane {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url("https://cdn-icons-png.flaticon.com/512/3125/3125713.png")
+    no-repeat center/contain;
+  animation: flyPlane 20s linear infinite;
+  z-index: 2;
+}
+.travel-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.plane {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: url("https://cdn-icons-png.flaticon.com/512/3125/3125713.png")
+    no-repeat center/contain;
+  animation: flyPlane 20s linear infinite;
+  z-index: 2;
+}
+
+.luggage {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: url("https://cdn-icons-png.flaticon.com/512/1086/1086555.png")
+    no-repeat center/contain;
+  animation: bounceLuggage 3s ease-in-out infinite;
+  bottom: 20%;
+  left: 15%;
+}
+
+.taj-mahal {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: url("https://cdn-icons-png.flaticon.com/512/4161/4161037.png")
+    no-repeat center/contain;
+  animation: riseLandmark 1.5s ease-out;
+  bottom: 10%;
+  right: 10%;
+}
+
+.compass {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url("https://cdn-icons-png.flaticon.com/512/2947/2947981.png")
+    no-repeat center/contain;
+  animation: rotateCompass 10s linear infinite;
+  top: 20%;
+  right: 15%;
+}
+
+@keyframes flyPlane {
+  0% {
+    left: -100px;
+    top: 20%;
+    transform: rotate(15deg);
+  }
+  50% {
+    top: 30%;
+  }
+  100% {
+    left: 100%;
+    top: 20%;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes bounceLuggage {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes riseLandmark {
+  from {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateCompass {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add animated elements */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 78, 80, 0.3),
+    rgba(249, 212, 35, 0.3)
+  );
+  z-index: 0;
+}
+.auth-image {
+  width: 50%;
+  background: url("https://www.holidify.com/images/bgImages/INDIA.jpg")
+    center/cover;
+  position: relative;
+}
+
+.auth-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.auth-forms {
+  width: 50%;
+  padding: 3rem;
+  position: relative;
+}
+
+.logo {
+  font-family: "Righteous", cursive;
+  font-size: 2.4rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  position: relative;
+  height: 650px;
+  overflow-y: auto; /* Adds vertical scroll if needed */
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+.form {
+  position: absolute;
+  width: 100%;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  backface-visibility: hidden;
+  padding: 20px 0;
+}
+
+/* Add smooth scrollbar styling */
+.form-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+/* Adjust auth-container for better fit */
+.auth-container {
+  height: auto;
+  min-height: 700px;
+  margin: 20px auto;
+}
+
+.login-form {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.signup-form {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.form.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1; /* Ensures active form is on top */
+}
+.form h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.welcome-text {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: white;
+}
+
+select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent);
+
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  background: var(--gradient);
+}
+
+.switch-form {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.switch-btn {
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+  .auth-image,
+  .auth-forms {
+    width: 100%;
+  }
+  .auth-image {
+    height: 200px;
+  }
+}

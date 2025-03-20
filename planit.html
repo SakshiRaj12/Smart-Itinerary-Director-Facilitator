@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanIt - Your "Special" Travel Planner</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="planit.css" />
+  </head>
+  <body>
+    <section class="plan-trip" id="plan">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Plan Your "Dream" Trip</h2>
+        <p>Experience India like never before... *wink wink*</p>
+      </div>
+      <div class="trip-planner-container">
+        <div class="planner-form" data-aos="fade-right">
+          <form class="trip-form">
+            <div class="form-group">
+              <label>Where do you dare to go?</label>
+              <select name="destination" required>
+                <option value="">Choose your fate...</option>
+                <optgroup label="Mysterious Locations">
+                  <option value="jaipur">
+                    Jaipur - The "Pink" City (Usually More Brown)
+                  </option>
+                  <option value="varanasi">
+                    Varanasi - Where Sleep is Optional
+                  </option>
+                  <option value="manali">Manali - "Herbal" Paradise</option>
+                  <option value="goa">
+                    Goa - What Happens Here Stays Here
+                  </option>
+                  <option value="kerala">
+                    Kerala - God's Own Country (Terms & Conditions Apply)
+                  </option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your "Budget" Range</label>
+              <select name="budget" required>
+                <option value="budget">Budget (Good Luck)</option>
+                <option value="moderate">Moderate (Still Questionable)</option>
+                <option value="luxury">Luxury (Maybe Real)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Travel Dates</label>
+              <div class="date-inputs">
+                <input
+                  type="date"
+                  name="start-date"
+                  placeholder="Start Date"
+                  required
+                />
+                <input
+                  type="date"
+                  name="end-date"
+                  placeholder="End Date"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Traveling With</label>
+              <select name="traveling-with" required>
+                <option value="">Select Travel Partner</option>
+                <option value="solo">Solo</option>
+                <option value="couple">Couple</option>
+                <option value="family">Family</option>
+                <option value="friends">Friends</option>
+                <option value="group">Group</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Adventure Level</label>
+              <div class="style-options">
+                <label class="style-option">
+                  <input type="checkbox" name="style" value="mild" />
+                  <span>Mild (Boring)</span>
+                </label>
+                <label class="style-option">
+                  <input type="checkbox" name="style" value="wild" />
+                  <span>Wild (Now We're Talking)</span>
+                </label>
+                <label class="style-option">
+                  <input type="checkbox" name="style" value="extreme" />
+                  <span>Extreme (No Questions Asked)</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Roll The Dice</button>
+          </form>
+        </div>
+
+        <div class="planner-features" data-aos="fade-left">
+          <div class="feature-card sketchy" id="uniqueExperiences">
+            <h3>Unique "Experiences"</h3>
+            <p>What happens on the trip, stays on the trip</p>
+          </div>
+          <div class="feature-card sketchy" id="localExpertise">
+            <h3>Local "Expertise"</h3>
+            <p>Our guides know the spots you won't find on Google</p>
+          </div>
+          <div class="feature-card sketchy" id="safetyGuidelines">
+            <h3>"Safety" Guidelines</h3>
+            <p>We probably won't lose you... probably</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add this new section for AI response -->
+      <div
+        class="ai-response-container"
+        id="aiResponse"
+        style="display: none"
+        data-aos="fade-up"
+      >
+        <div class="response-header">
+          <h3>Your Personalized Travel Plan</h3>
+          <div
+            class="loading-spinner"
+            id="loadingSpinner"
+            style="display: none"
+          >
+            <div class="spinner"></div>
+          </div>
+        </div>
+        <div class="itinerary-content" id="itineraryContent">
+          <!-- AI response will be inserted here -->
+        </div>
+        <!-- Add download button -->
+        <div class="download-section">
+          <button id="downloadPlan" class="download-btn" style="display: none">
+            <span>📥</span> Download Travel Plan
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Add these new script tags -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="planit.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+      document
+        .getElementById("uniqueExperiences")
+        .addEventListener("click", function () {
+          window.location.href = "index.html#seasonal";
+        });
+    </script>
+  </body>
+</html>
